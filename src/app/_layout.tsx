@@ -1,16 +1,35 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import React from 'react';
-import { useColorScheme } from 'react-native';
+import { Tabs } from 'expo-router'
+import React from 'react'
+import { useColorScheme, } from 'react-native'
+import Colors from "../constants/Colors"
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+/*import ThemeColors from '@react-nvigation/core/src/ThemeColors' */
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+const RootLayout = () => {
+  const colorScheme = useColorScheme()
+  const theme = Colors[colorScheme] ?? Colors.light
+
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
-  );
+      <Tabs 
+        screenOptions={{ 
+            headerShown: false,
+            tabBarStyle: {
+              backgroundColor: theme.navBackground,
+              paddingTop: 10,
+              height: 90,
+            },
+            tabBarActiveTintColor: theme.iconColorFocused,
+        tabBarInactiveTintColor: theme.iconColor}}      
+      >
+        <Tabs.Screen name="index" 
+          options={{title: 'Home'}}
+        />
+        <Tabs.Screen name="about" 
+          options={{title: 'About page'}}
+        />
+        
+      </Tabs>
+  )
 }
+
+export default RootLayout
