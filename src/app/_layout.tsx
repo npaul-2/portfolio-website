@@ -1,35 +1,48 @@
-import { Tabs } from 'expo-router'
-import React from 'react'
-import { useColorScheme, } from 'react-native'
-import Colors from "../constants/Colors"
+import { Stack } from 'expo-router';
+import React from 'react';
+import { StyleSheet, useColorScheme, View } from 'react-native';
+import Navbar from '../components/Navbar';
 
 /*import ThemeColors from '@react-nvigation/core/src/ThemeColors' */
 
 const RootLayout = () => {
   const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light
+  //const theme = Colors[colorScheme] ?? Colors.light
 
   return (
-      <Tabs 
-        screenOptions={{ 
-            headerShown: false,
-            tabBarStyle: {
-              backgroundColor: theme.navBackground,
-              paddingTop: 10,
-              height: 90,
-            },
-            tabBarActiveTintColor: theme.iconColorFocused,
-        tabBarInactiveTintColor: theme.iconColor}}      
-      >
-        <Tabs.Screen name="index" 
-          options={{title: 'Home'}}
-        />
-        <Tabs.Screen name="about" 
-          options={{title: 'About page'}}
-        />
-        
-      </Tabs>
-  )
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <Navbar />
+
+      <View style={{ flex: 1 }}>
+        <Stack screenOptions={{ headerShown: false }} />
+      </View>
+    </View>
+  );
 }
 
 export default RootLayout
+
+const styles = StyleSheet.create({
+  // like a css class, 
+  // use similar commands but in camelCase
+  container: {
+    flex: 1,
+    alignItems: "center", 
+    justifyContent: 'center'
+  },
+  heading: {
+    fontWeight: "bold",
+    fontSize: 30,
+    justifyContent: "center",
+  },
+  scrollContent: {
+    flexGrow: 1, 
+  },
+  navbarContainer: {
+    position: 'absolute', 
+    top: 100,
+    left: 0,
+    right: 0,
+    zIndex: 0, 
+  }
+})

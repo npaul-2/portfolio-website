@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "stretch", 
     justifyContent: "center",
+    borderWidth: 2, 
+    borderColor: 'red',
   },
   heading: {
     fontweight: "bold",

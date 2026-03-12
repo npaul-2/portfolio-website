@@ -12,13 +12,13 @@ const About = () => {
     <ThemedView style={styles.container}>
       <Spacer/>
       <ThemedText title={true} style={styles.heading}>
-        Cool Title
+        Title
       </ThemedText>
       <Spacer/>
-      <ThemedCard>
-        <ThemedText>
+      <ThemedCard style={styles.container}>
+        <ThemedText style>
           Nebo Paul: {"\n"}
-          Worked on the pages, layout, and github setup.
+          many years of something
         </ThemedText>    
       </ThemedCard>
       <Spacer/> 

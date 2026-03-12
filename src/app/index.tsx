@@ -1,80 +1,71 @@
-import React, { useEffect, useState } from 'react'
-import { ScrollView, StyleSheet, } from 'react-native'
+import { Link } from 'expo-router'
+import React from 'react'
+import { ScrollView, StyleSheet } from 'react-native'
+import Nebo from '../assets/nebo_transparent_print_2.jpg'
+import ImageText from '../components/ImageText'
 import Spacer from '../components/Spacer'
 import ThemedCard from '../components/ThemedCard'
 import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
 
+const Students = () => {
+  return ( 
+    <ScrollView>
+    <ThemedView style={styles.container} safe={true}>
+      <Spacer/>
 
-const Home = () => {
-
-  //uncomment if feel like adding flipcard to homepage
-  const [flipped, setFlipped] = useState(false)
-
-   useEffect(() => {
-    const time2flip = setInterval(() => {
-      setFlipped((prev) => !prev)
-    }, 2000)
-    return () => clearInterval(time2flip)
-  }, [])
-
-  //try putting this in body later...
-
-
-   
-  return (
-    <ScrollView 
-        style={{flex: 1,}} 
-        contentContainerStyle={styles.scrollContent}
-    >
-    <ThemedView style={styles.container}>
+      <ThemedText title={true} style={styles.heading}>
+        It's "me"
+      </ThemedText>
       <Spacer/>
       <ThemedText title={true} style={styles.heading}>
-        test homepage
-      </ThemedText> 
-
-      <Spacer height = {10}/>
-
-      <ThemedText>
-        Nebo Paul        
+        Nebo Paul {"\n"}
+        Computer Science Student
+      </ThemedText>
+      <Spacer height={20}/>
+      <ThemedText style>
+        GitHub:  <Link href="https://github.com/npaul-2"
+           style={styles.link}>
+                <ThemedText>https://github.com/npaul-2</ThemedText>
+        </Link> {"\n"}
+        Email:    npaul2@csub.edu 
       </ThemedText>
 
+      <ImageText logo={Nebo} txt="" style={styles.img} />
+
       <Spacer/>
 
-      <ThemedCard>
-        <ThemedText >
-          paragraph sample {"\n"}
-          line 2 {"\n"}
-          Made for CSUB course CMPS 3390, Application Development.
-        </ThemedText>
+      <ThemedCard style>
+        <ThemedText style>
+          yeah man just say whatever here i guess {"\n"}
+          i hope noone reads this {"\n"}
+          </ThemedText>
       </ThemedCard> 
 
-      <Spacer/>
-
-
-      <Spacer/>
-
+      <Spacer height={60}/>  
+        
     </ThemedView>
     </ScrollView>
   )
 }
 
-export default Home
+export default Students
 
 const styles = StyleSheet.create({
-  // like a css class, 
-  // use similar commands but in camelCase
   container: {
     flex: 1,
     alignItems: "center", 
-    justifyContent: 'center'
+    justifyContent: "center",
+    paddingTop: 80,
   },
   heading: {
-    fontweight: "bold",
+    fontWeight: "bold",
     fontSize: 30,
+    alignItems: "center", 
     justifyContent: "center",
   },
-  scrollContent: {
-    flexGrow: 1, 
+  link: {
+    marginVertical: 7,
+    borderBottomWidth: 2,
   },
 })
