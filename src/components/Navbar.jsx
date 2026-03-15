@@ -1,16 +1,17 @@
 import { Link } from 'expo-router';
-import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Dropdown from './Dropdown';
 
 export default function Navbar() {
   const blogLinks = [
     { label: 'blog', href: '/blog' },
-    { label: 'blog detail', href: '/blog/test-slug' },
+    { label: 'post 1', href: '/blog/post1' },
+    { label: 'post 2', href: '/blog/post2' },
   ];
   const portLinks = [
     { label: 'portfolio', href: '/portfolio' },
-    { label: 'portfolio detail', href: '/portfolio/test-slug' },
+    { label: 'project 1', href: '/portfolio/proj1' },
+    { label: 'project 2', href: '/portfolio/proj2' },
   ];
     return (
         <View style={styles.navbar}>

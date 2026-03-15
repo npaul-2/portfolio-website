@@ -1,13 +1,8 @@
 import { Link } from 'expo-router';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-interface DropdownProps {
-  label: string;
-  items: { label: string; href: any }[];
-}
-
-const Dropdown = ({ label, items }: DropdownProps) => {
+const Dropdown = ({ label, items }) => {
   const [visible, setVisible] = useState(false);
 
   return (

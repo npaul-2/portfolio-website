@@ -1,6 +1,7 @@
 import ThemedCard from '@/components/ThemedCard'
 import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
+import DownloadButton from '../components/DownloadButton'
 import Spacer from '../components/Spacer'
 import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
@@ -22,6 +23,13 @@ const About = () => {
         </ThemedText>    
       </ThemedCard>
       <Spacer/> 
+      <DownloadButton
+        style 
+        fileName="not a resume"
+        fileSource={require('../assets/spongerob.pdf')} 
+      />
+
+
     </ThemedView>
     </ScrollView>
   )

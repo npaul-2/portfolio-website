@@ -3,7 +3,7 @@ import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
 import TitleCard from '../components/TitleCard'
 
-const Contact = () => {
+const Resume = () => {
 
   return (
     <ThemedView style={styles.container}>
@@ -20,7 +20,7 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Resume
 const styles = StyleSheet.create({
   container: {
     flex: 1,

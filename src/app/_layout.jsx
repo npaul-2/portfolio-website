@@ -1,18 +1,16 @@
 import { Stack } from 'expo-router';
-import React from 'react';
 import { StyleSheet, useColorScheme, View } from 'react-native';
 import Navbar from '../components/Navbar';
 
-/*import ThemeColors from '@react-nvigation/core/src/ThemeColors' */
-
 const RootLayout = () => {
-  const colorScheme = useColorScheme()
-  //const theme = Colors[colorScheme] ?? Colors.light
+  const colorScheme = useColorScheme();
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
+      {/* 1. Navbar stays at the top of the file to render on top */}
       <Navbar />
 
+      {/* 2. The Stack fills the remaining screen space */}
       <View style={{ flex: 1 }}>
         <Stack screenOptions={{ headerShown: false }} />
       </View>
@@ -20,11 +18,9 @@ const RootLayout = () => {
   );
 }
 
-export default RootLayout
+export default RootLayout;
 
 const styles = StyleSheet.create({
-  // like a css class, 
-  // use similar commands but in camelCase
   container: {
     flex: 1,
     alignItems: "center", 
@@ -38,11 +34,12 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1, 
   },
+
   navbarContainer: {
     position: 'absolute', 
-    top: 100,
+    top: 0,
     left: 0,
     right: 0,
-    zIndex: 0, 
+    zIndex: 100, 
   }
-})
+});
