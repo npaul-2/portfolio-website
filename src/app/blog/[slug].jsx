@@ -1,9 +1,9 @@
 import { useLocalSearchParams } from 'expo-router';
 import { ScrollView, StyleSheet } from 'react-native';
-import Spacer from '../../components/Spacer';
-import ThemedCard from '../../components/ThemedCard';
-import ThemedText from '../../components/ThemedText';
-import ThemedView from '../../components/ThemedView';
+import Spacer from '../../components/Spacer.jsx';
+import ThemedCard from '../../components/ThemedCard.jsx';
+import ThemedText from '../../components/ThemedText.jsx';
+import ThemedView from '../../components/ThemedView.jsx';
 import posts from '../../data/posts.js';
 
 const PostDetail = () => {
