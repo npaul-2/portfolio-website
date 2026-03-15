@@ -1,6 +1,5 @@
 import { Asset } from 'expo-asset';
 import * as Sharing from 'expo-sharing';
-import React from 'react';
 import { Alert, Platform, StyleSheet, TouchableOpacity } from 'react-native';
 import ThemedText from './ThemedText';
 

@@ -1,5 +1,4 @@
 import ThemedCard from '@/components/ThemedCard'
-import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
 import DownloadButton from '../components/DownloadButton'
 import Spacer from '../components/Spacer'
@@ -25,8 +24,8 @@ const About = () => {
       <Spacer/> 
       <DownloadButton
         style 
-        fileName="not a resume"
-        fileSource={require('../assets/spongerob.pdf')} 
+        fileName="a resume"
+        fileSource={require('../assets/Nebo_Paul_Resume_2025.pdf')} 
       />
 
 
