@@ -10,8 +10,9 @@ export default function Navbar() {
   ];
   const portLinks = [
     { label: 'portfolio', href: '/portfolio' },
-    { label: 'project 1', href: '/portfolio/proj1' },
-    { label: 'project 2', href: '/portfolio/proj2' },
+    { label: 'project 1', href: '/portfolio/minigame_mania' },
+    { label: 'project 2', href: '/portfolio/3d_platformer' },
+    { label: 'project 3', href: '/portfolio/proj3' },
   ];
     return (
         <View style={styles.navbar}>

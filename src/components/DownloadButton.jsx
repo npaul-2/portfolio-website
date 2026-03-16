@@ -36,7 +36,7 @@ const DownloadButton = ({ fileSource, fileName, style }) => {
 
   return (
     <TouchableOpacity style={[styles.button, style]} onPress={handleDownload}>
-      <ThemedText style={styles.text}>Download {fileName}</ThemedText>
+      <ThemedText style={styles.text}>Download Resume</ThemedText>
     </TouchableOpacity>
   );
 };
