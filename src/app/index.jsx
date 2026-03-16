@@ -1,15 +1,16 @@
 import { Link } from 'expo-router'
-import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
 import Nebo from '../assets/nebo_transparent_print_2.jpg'
+import Footer from '../components/Footer'
 import ImageText from '../components/ImageText'
 import Spacer from '../components/Spacer'
 import ThemedCard from '../components/ThemedCard'
 import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
 
-const Students = () => {
+const Home = () => {
   return ( 
+    <ThemedView style={{flex: 1}}>
     <ScrollView>
     <ThemedView style={styles.container} safe={true}>
       <Spacer/>
@@ -43,13 +44,18 @@ const Students = () => {
       </ThemedCard> 
 
       <Spacer height={60}/>  
+
+      
         
     </ThemedView>
     </ScrollView>
+    <Footer></Footer>
+
+    </ThemedView>
   )
 }
 
-export default Students
+export default Home
 
 const styles = StyleSheet.create({
   container: {

@@ -1,4 +1,5 @@
-import { StyleSheet, } from 'react-native'
+import { ScrollView, StyleSheet, } from 'react-native'
+import Footer from '../components/Footer'
 import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
 import TitleCard from '../components/TitleCard'
@@ -6,6 +7,8 @@ import TitleCard from '../components/TitleCard'
 const Resume = () => {
 
   return (
+    <ThemedView style={{flex: 1}}>
+    <ScrollView>
     <ThemedView style={styles.container}>
       <TitleCard txt='yeah i got skills'>
         <ThemedText>
@@ -15,6 +18,9 @@ const Resume = () => {
           ● just you wait buddy
         </ThemedText>    
       </TitleCard>
+    </ThemedView>
+    </ScrollView>
+    <Footer></Footer>
     </ThemedView>
 
   )

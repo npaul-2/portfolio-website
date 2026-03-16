@@ -1,6 +1,7 @@
 import ThemedCard from '@/components/ThemedCard'
 import { ScrollView, StyleSheet } from 'react-native'
 import DownloadButton from '../components/DownloadButton'
+import Footer from '../components/Footer'
 import Spacer from '../components/Spacer'
 import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
@@ -8,6 +9,7 @@ import ThemedView from '../components/ThemedView'
 
 const About = () => {
   return (
+    <ThemedView style={{flex: 1}}>
     <ScrollView>
     <ThemedView style={styles.container}>
       <Spacer/>
@@ -31,6 +33,8 @@ const About = () => {
 
     </ThemedView>
     </ScrollView>
+    <Footer></Footer>
+    </ThemedView>
   )
 }
 
