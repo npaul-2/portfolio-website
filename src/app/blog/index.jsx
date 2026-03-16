@@ -22,7 +22,6 @@ const Blog = () => {
 
       <Spacer/>
 
-
       {posts.map((post) => (
         <Link key={post.id} href={`/blog/${post.slug}`} asChild>
           <TitleCard txt={post.title}

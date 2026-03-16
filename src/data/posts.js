@@ -12,7 +12,7 @@ const posts = [
   {
     "id": "2",
     "title": "Ant Colony Optimization",
-    "date": "03-14-2026",
+    "date": "03-16-2026",
     "slug": "post2",
     "excerpt": "Find the best pathways",
     "content": "Ant Colony Optimization Algorithms find the best pathways using a process like how ants create paths to food. \nAnts deposit pheromone along paths proportional to the length, so shorter, better paths have more pheromone. \nAnts are then drawn to paths with strong pheromones, so good paths are reinforced. \nBecause of pheromone decay, bad paths pheromone levels decrease more as less ants travel it. ",
@@ -22,7 +22,7 @@ const posts = [
   {
     "id": "3",
     "title": "Natural Join",
-    "date": "03-14-2026",
+    "date": "03-16-2026",
     "slug": "post3",
     "excerpt": "Combine Columns",
     "content": "Natural Joins in SQL will combine columns of two tables with the same column name and data type without making duplicates. \nDuplicate columns and non-matching rows are discarded.",

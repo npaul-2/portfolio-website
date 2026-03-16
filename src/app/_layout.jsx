@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1, 
   },
-
   navbarContainer: {
     position: 'absolute', 
     top: 0,

@@ -49,11 +49,11 @@ const Contact = () => {
         padding: 15,
         textAlignVertical: 'top'
         }}
-      placeholder='Message'
-      onChangeText={setMsg}
-      value={msg}
-      multiline={true}
-      numberOfLines={7}
+        placeholder='Message'
+        onChangeText={setMsg}
+        value={msg}
+        multiline={true}
+        numberOfLines={7}
       ></ThemedTextInput>
 
       <ThemedButton onPress={handleSubmit}>

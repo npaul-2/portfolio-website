@@ -19,8 +19,6 @@ const Home = () => {
     <ScrollView>
     <ThemedView style={styles.container} safe={true}>
 
-        
-
       <ThemedView style={[styles.double, 
       {backgroundColor: theme.navBackground}]} safe={true}>
 
@@ -53,7 +51,6 @@ const Home = () => {
       </ThemedView>
 
       </ThemedView>
-     
 
       <Spacer/>
 
@@ -64,11 +61,7 @@ const Home = () => {
         </Link> {"\n"} 
       </ThemedText>
 
-      
-
       <Spacer/>  
-
-      
         
     </ThemedView>
     </ScrollView>
@@ -100,7 +93,7 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1, 
   },
-    double: {
+  double: {
     display: "flex",
     flexDirection: "row",
     alignItems: 'center', 

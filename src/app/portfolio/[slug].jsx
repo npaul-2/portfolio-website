@@ -55,8 +55,8 @@ const ProjectDetail = () => {
           <ThemedText>{project.description}</ThemedText>
 
           <ThemedView style={[styles.tagContainer, 
-            {backgroundColor: theme.navBackground}]}>
-            {project.techStack.map((tech, index) => (
+                      {backgroundColor: theme.navBackground}]}>
+                      {project.techStack.map((tech, index) => (
               <ThemedView key={index} style={styles.tag}>
                 <ThemedText style={styles.tagText}>{tech}</ThemedText>
               </ThemedView>
