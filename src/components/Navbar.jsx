@@ -5,8 +5,9 @@ import Dropdown from './Dropdown';
 export default function Navbar() {
   const blogLinks = [
     { label: 'blog', href: '/blog' },
-    { label: 'post 1', href: '/blog/post1' },
-    { label: 'post 2', href: '/blog/post2' },
+    { label: 'Internet of Things', href: '/blog/post1' },
+    { label: 'Ant Colony Optimization', href: '/blog/post2' },
+    { label: 'Natural Join', href: '/blog/post3' },
   ];
   const portLinks = [
     { label: 'Overview', href: '/portfolio' },

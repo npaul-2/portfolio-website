@@ -78,6 +78,8 @@ const Contact = () => {
         </Link> {"\n"} 
       </ThemedText>
 
+      <Spacer></Spacer>
+
     </ThemedView>
     </ScrollView>
     <Footer></Footer>
