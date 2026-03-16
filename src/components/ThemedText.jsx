@@ -16,7 +16,9 @@ const ThemedText = ({ style, title = false, ...props }) => {
     <Text 
     style={[{ color: textColor, 
       //fontFamily: 'Jersey10_400Regular',
-      lineHeight: 22,
+      lineHeight: 30,
+      //marginBottom: 5,
+      //lineHeight: 25,
       fontSize: 20,
       letterSpacing: 1,
     }, style]}

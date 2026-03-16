@@ -1,49 +1,72 @@
 import { Link } from 'expo-router'
-import { ScrollView, StyleSheet } from 'react-native'
-import Nebo from '../assets/nebo_transparent_print_2.jpg'
+import { ScrollView, StyleSheet, useColorScheme } from 'react-native'
+import Nebo2 from '../assets/neboMirror.jpg'
 import Footer from '../components/Footer'
 import ImageText from '../components/ImageText'
 import Spacer from '../components/Spacer'
 import ThemedCard from '../components/ThemedCard'
 import ThemedText from '../components/ThemedText'
 import ThemedView from '../components/ThemedView'
+import VertSpacer from '../components/VertSpacer'
+import Colors from "../constants/Colors"
 
 const Home = () => {
+  const colorScheme = useColorScheme()
+  const theme = Colors[colorScheme] ?? Colors.light
+
   return ( 
     <ThemedView style={{flex: 1}}>
     <ScrollView>
     <ThemedView style={styles.container} safe={true}>
-      <Spacer/>
+
+        
+
+      <ThemedView style={[styles.double, 
+      {backgroundColor: theme.navBackground}]} safe={true}>
+
+      <Spacer height = {350}/>
+
+      <ImageText logo={Nebo2} txt="" style={styles.img} />
+
+      <VertSpacer/>
+
+      <ThemedView style={ 
+      {backgroundColor: theme.navBackground}}>
 
       <ThemedText title={true} style={styles.heading}>
-        It's "me"
-      </ThemedText>
-      <Spacer/>
-      <ThemedText title={true} style={styles.heading}>
-        Nebo Paul {"\n"}
-        Computer Science Student
+         Nebo Paul {"\n"}
       </ThemedText>
       <Spacer height={20}/>
-      <ThemedText style>
-        GitHub:  <Link href="https://github.com/npaul-2"
-           style={styles.link}>
-                <ThemedText>https://github.com/npaul-2</ThemedText>
-        </Link> {"\n"}
-        Email:    npaul2@csub.edu 
+      <ThemedText title={true} style={styles.heading}>
+        Computer Science Student at CSUB
       </ThemedText>
+      <Spacer height={10}/>
 
-      <ImageText logo={Nebo} txt="" style={styles.img} />
-
-      <Spacer/>
-
-      <ThemedCard style>
+      <ThemedCard style={[ { maxWidth: 500, boxShadow: '4px, 4px #6e07bb' }]}>
         <ThemedText style>
-          yeah man just say whatever here i guess {"\n"}
-          i hope noone reads this {"\n"}
+          Computer Science junior seeking software devlopment internships. {"\n"}
+          Enjoys the arts, walking, and programming. {"\n"}
+          Experience in something team-projects and problem solving {"\n"}
           </ThemedText>
       </ThemedCard> 
 
-      <Spacer height={60}/>  
+      </ThemedView>
+
+      </ThemedView>
+     
+
+      <Spacer/>
+
+      <ThemedText style>
+        <Link href="https://github.com/npaul-2"
+           style={styles.link}>
+                <ThemedText>Visit my github!</ThemedText>
+        </Link> {"\n"} 
+      </ThemedText>
+
+      
+
+      <Spacer/>  
 
       
         
@@ -73,5 +96,22 @@ const styles = StyleSheet.create({
   link: {
     marginVertical: 7,
     borderBottomWidth: 2,
+  },
+  scrollContent: {
+    flexGrow: 1, 
+  },
+    double: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: 'center', 
+    justifyContent: 'right',
+    //padding: 20,
+    //maxWidth: 300,
+    borderRadius: 5,
+    //backgroundColor: theme.navBackground,
+    //boxShadow: '4px 4px #6e07bb'
+    paddingHorizontal: 20,
+    //width: '100%',
+    //justifyContent: "space-between",
   },
 })

@@ -8,7 +8,7 @@ const Colors = {
         text: '#ffffff',
         title: '#ffffff',
         background: '#000000',
-        navBackground: '#7070cc',
+        navBackground: '#8e8ebe',
         iconColor: '#20dede',
         iconColorFocused: '#ff6898',
         uiBackground: '#2bc53d',
@@ -21,7 +21,7 @@ const Colors = {
         navBackground: '#d7910d',
         iconColor: '#d83a13',
         iconColorFocused: '#c19f88',
-        uiBackground: '#a481ee',
+        uiBackground: '#a293c1',
     },
 }
 
