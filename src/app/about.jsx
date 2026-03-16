@@ -36,12 +36,11 @@ const About = () => {
 
       <Spacer/>
 
-      <TitleCard style={styles.container}>
+      <TitleCard style={[ { maxWidth: 600, boxShadow: '4px, 4px #6e07bb' }]}>
         <ThemedText style>
           My name is Nebo Paul, and I'm a computer science student from Lancaster CA. {"\n"}
-          3 years of college level experience {"\n"}
-          3 years of college level experience {"\n"}
-          3 years of college level experience {"\n"}
+          I've lived in Lancaster for over 20 years, but I’m excited to broaden my horizons to tech hotspots like Northern California. {"\n"}
+          Computer science has been a large part of my life since high school, and I’m currently almost finished with my bachelors program at the CSUB AV extension. {"\n"}
         </ThemedText>    
       </TitleCard>
 

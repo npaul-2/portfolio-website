@@ -1,5 +1,5 @@
 export const ProjectImages = {
-  "maniaImg": require('../assets/bean1.jpg'),
-  "3dImg": require('../assets/bean2.jpg'),
-  "artImg": require('../assets/bean3.jpg'),
+  "maniaImg": require('../assets/godot.png'),
+  "3dImg": require('../assets/unity.png'),
+  "artImg": require('../assets/flutter.jpg'),
 };

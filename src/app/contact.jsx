@@ -29,13 +29,13 @@ const Contact = () => {
       </ThemedText>
       <Spacer/>
 
-      <ThemedTextInput style={{width: '80%', marginBottom: 20}}
+      <ThemedTextInput style={{width: 600, marginBottom: 20}}
       placeholder='Name'
       onChangeText={setName}
       value={name}
       ></ThemedTextInput>
 
-      <ThemedTextInput style={{width: '80%', marginBottom: 20}}
+      <ThemedTextInput style={{width: 600, marginBottom: 20}}
       placeholder='Email'
       keyboardType="email-address"
       onChangeText={setEmail}
@@ -43,7 +43,7 @@ const Contact = () => {
       ></ThemedTextInput>
 
       <ThemedTextInput style={{
-        width: '80%',
+        width: 600,
         height: 200,
         marginBottom: 20,
         padding: 15,
