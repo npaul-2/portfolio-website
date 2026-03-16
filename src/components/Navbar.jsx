@@ -22,8 +22,8 @@ export default function Navbar() {
       <Link href="/about" style={styles.navLink}>About</Link>
       <Link href="/contact" style={styles.navLink}>Contact</Link>
       
-      <Dropdown label="blog" items={blogLinks} />
-      <Dropdown label="portfolio" items={portLinks} />
+      <Dropdown label="Blog" items={blogLinks} />
+      <Dropdown label="Portfolio" items={portLinks} />
     </View>
     );
 }
