@@ -17,7 +17,7 @@ export default function Navbar() {
     return (
         <View style={styles.navbar}>
       <Link href="/" style={styles.navLink}>Home</Link>
-      <Link href="/resume" style={styles.navLink}>Resume yeah</Link>
+      <Link href="/resume" style={styles.navLink}>Resume</Link>
       <Link href="/about" style={styles.navLink}>About</Link>
       <Link href="/contact" style={styles.navLink}>Contact</Link>
       
