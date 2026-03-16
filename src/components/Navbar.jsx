@@ -9,10 +9,10 @@ export default function Navbar() {
     { label: 'post 2', href: '/blog/post2' },
   ];
   const portLinks = [
-    { label: 'portfolio', href: '/portfolio' },
-    { label: 'project 1', href: '/portfolio/minigame_mania' },
-    { label: 'project 2', href: '/portfolio/3d_platformer' },
-    { label: 'project 3', href: '/portfolio/proj3' },
+    { label: 'Overview', href: '/portfolio' },
+    { label: 'Minigame Mania', href: '/portfolio/minigame_mania' },
+    { label: '3D Platformer', href: '/portfolio/3d_platformer' },
+    { label: 'Art installer app', href: '/portfolio/art_app' },
   ];
     return (
         <View style={styles.navbar}>

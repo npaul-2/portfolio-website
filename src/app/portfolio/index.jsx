@@ -1,33 +1,39 @@
 import { Link } from 'expo-router';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, useColorScheme } from 'react-native';
 import Footer from '../../components/Footer';
 import Spacer from '../../components/Spacer';
 import ThemedCard from '../../components/ThemedCard';
 import ThemedText from '../../components/ThemedText';
 import ThemedView from '../../components/ThemedView';
-import TitleCard from '../../components/TitleCard';
+import Colors from '../../constants/Colors';
 import projects from '../../data/projects';
+
 const Portfolio = () => {
+
+  const colorScheme = useColorScheme()
+    const theme = Colors[colorScheme] ?? Colors.light
 
   return (
     <ThemedView style={{flex: 1}}>
     <ScrollView>
     <ThemedView style={styles.container}>
 
-      <TitleCard txt='do i have projects'>
-        <ThemedText>
-          ● oh yeah{"\n"}{"\n"}
-          ● they comin {"\n"}
-        </ThemedText>    
-      </TitleCard>
-
       <Spacer></Spacer>
 
       {projects.map((project) => (
         <Link key={project.id} href={`/portfolio/${project.slug}`} asChild>
-          <ThemedCard style={{ marginBottom: 20 }}>
+          <ThemedCard style={{ marginBottom: 20 , width: 300,}}>
             <ThemedText title>{project.title}</ThemedText>
-            <ThemedText>{project.description}</ThemedText>
+
+            <ThemedView style={[styles.tagContainer, 
+      {backgroundColor: theme.navBackground}]}>
+            {project.techStack.map((tech, index) => (
+              <ThemedView key={index} style={styles.tag}>
+                <ThemedText style={styles.tagText}>{tech}</ThemedText>
+              </ThemedView>
+             ))}
+            </ThemedView>
+
           </ThemedCard>
         </Link>
       ))}
@@ -46,5 +52,22 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center", 
     justifyContent: 'center'
+  },
+  tagContainer: {
+    flexDirection: 'row',     
+    flexWrap: 'wrap',  
+    gap: 10,      
+    marginTop: 10,
+  },
+  tag: {
+    backgroundColor: '#6e07bb',
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 15,
+  },
+  tagText: {
+    color: 'white',
+    fontSize: 12,
+    fontWeight: 'bold',
   },
 })
