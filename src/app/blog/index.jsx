@@ -1,7 +1,7 @@
 import { Link } from 'expo-router'
 import { ScrollView, StyleSheet } from 'react-native'
 import Footer from '../../components/Footer'
-import ThemedCard from '../../components/ThemedCard'
+import Spacer from '../../components/Spacer'
 import ThemedText from '../../components/ThemedText'
 import ThemedView from '../../components/ThemedView'
 import TitleCard from '../../components/TitleCard'
@@ -13,21 +13,23 @@ const Blog = () => {
     <ThemedView style={{flex: 1}}>
     <ScrollView>
     <ThemedView style={styles.container}>
-      <TitleCard txt='do i have anything to say'>
-        <ThemedText>
-          ● yeah{"\n"}{"\n"}
-          ● but {"\n"}
-          {"\n"}
-          ● I won't
-        </ThemedText>    
-      </TitleCard>
+
+      <Spacer/>
+
+      <ThemedText title={true} style={styles.heading}>
+         Blog {"\n"}
+      </ThemedText>
+
+      <Spacer/>
+
 
       {posts.map((post) => (
         <Link key={post.id} href={`/blog/${post.slug}`} asChild>
-          <ThemedCard style={{ marginBottom: 20 }}>
-            <ThemedText title>{post.title}</ThemedText>
+          <TitleCard txt={post.title}
+          style={{ marginBottom: 20, width: 300, }}>
+            <ThemedText>{post.date}</ThemedText>
             <ThemedText>{post.excerpt}</ThemedText>
-          </ThemedCard>
+          </TitleCard>
         </Link>
       ))}
 
@@ -45,5 +47,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center", 
     justifyContent: 'center'
+  },
+  heading: {
+    fontWeight: "bold",
+    fontSize: 30,
+    alignItems: "center", 
+    justifyContent: "center",
   },
 })

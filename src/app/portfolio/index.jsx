@@ -18,7 +18,13 @@ const Portfolio = () => {
     <ScrollView>
     <ThemedView style={styles.container}>
 
-      <Spacer></Spacer>
+      <Spacer/>
+
+      <ThemedText title={true} style={styles.heading}>
+        Portfolio {"\n"}
+      </ThemedText>
+
+      <Spacer/>
 
       {projects.map((project) => (
         <Link key={project.id} href={`/portfolio/${project.slug}`} asChild>
@@ -69,5 +75,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 12,
     fontWeight: 'bold',
+  },
+  heading: {
+    fontWeight: "bold",
+    fontSize: 30,
+    alignItems: "center", 
+    justifyContent: "center",
   },
 })
