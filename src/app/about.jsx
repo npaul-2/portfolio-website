@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   heading: {
-    //fontweight: "bold",
+    fontWeight: "bold",
     fontSize: 30,
     justifyContent: "center",
   },
